@@ -1,0 +1,21 @@
+{
+  "name": "moment2",
+  "version": "1.0.0",
+  "description": "Moment 2 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Selma Kohnic",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^6.11.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4"
+  }
+}
