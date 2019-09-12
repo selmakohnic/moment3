@@ -13,4 +13,4 @@
     * **cssTask()** - Sammanslår, minifierar, kopierar CSS-filer och talar om för webbläsaren att ändringarna är gjorda
     * **jsTask()** -  Sammanslår, minifierar, kopierar JS-filer och talar om för webbläsaren att ändringarna är gjorda 
     * **copyImg()** - Kopierar bilder och talar om för webbpläsaren att ändringen är gjord
-    * För att starta systemet skriv kommandot **npm install** i en terminal
+    * För att starta systemet klona först projektet genom: **git clone https://github.com/selmakohnic/moment2.git** och skriv därefter kommandot: **npm install** i en terminal
