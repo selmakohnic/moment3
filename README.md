@@ -6,7 +6,7 @@
     * **gulp-concat** - För att sammanslå filer
     * **gulp-uglify-es** - För att minifiera JS-filer
     * **gulp-clean-css** - För att minifera CSS-filer
-    * **gulp-livereload** - För att uppdatera webbläsaren vid en ändring
+    * **browser-sync** - För att uppdatera webbläsaren vid en ändring
 3. Beskriv systemet du har skapat, hur man startar upp det och de tasks som ingår.<br>
 **Svar:** Det system som har skapats kopierar över filer till en specifik mapp för publicering, sammanslår och minifierar filer. Systemet består av ett antal tasks som beskrivs nedan. En watcher lyssnar på alla tasks.<br>
     * **copyHtml()** - Kopierar HTML-filer och talar om för webbpläsaren att ändringen är gjord
