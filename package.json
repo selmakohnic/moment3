@@ -12,10 +12,10 @@
     "npm": "^6.11.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^4.0.1",
     "gulp-uglify-es": "^1.0.4"
   }
 }
