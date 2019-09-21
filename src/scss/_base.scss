@@ -1,0 +1,15 @@
+//Innehåller baskod
+//Variabler
+$font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$purple: #8a6dae;
+$lightPurple: lighten($purple, 20);
+$link-color: #000000;
+$link-border: #f4cb1c;
+$footer-color: #ffffff;
+
+//Mixins
+@mixin indexText($float-element) {
+    width: 50%;
+    margin-top: 4em;
+    float: $float-element;
+}

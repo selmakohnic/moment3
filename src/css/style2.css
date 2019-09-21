@@ -1,9 +1,0 @@
-/* Bakgrundsfärgen görs ljusrosa. Den här kommentaren kommer att tas bort med minifiering.*/
-body {
-    background-color: #f7ebfc;
-    text-align: center;
-}
-
-img {
-    width: 20em;
-}

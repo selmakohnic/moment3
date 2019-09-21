@@ -1,0 +1,73 @@
+//Innehåller kod för responsivitet
+@media screen and (max-width: 850px) {
+    .hamburgerMenu {
+        display: block;
+    }
+
+    #globalNav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        z-index: 10000;
+        background-color: #f9f9f9;
+        padding-bottom: 1.5em;
+        width: 100%;
+
+        ul {
+            padding: 0;
+            margin-top: 1em;
+            float: none;
+
+            li {
+                display: block;       
+                margin-right: 0;
+                margin-top: 2.5em;
+                width: 100%;
+                text-align: center;
+            }
+
+            li:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    #leftText, #rightText {
+        width: 100%;
+        float: none;
+        border: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    figure {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    figure {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    body {
+        font-size: 0.9em;
+    }
+    
+    header img {
+        width: 9em;
+    }
+
+    .hamburgerMenu, .hMenuClose {
+        margin-top: 1.8em;
+        width: 22px;
+        height: 22px;
+    }
+
+    #globalNav {
+        width: 100%;
+    }
+}

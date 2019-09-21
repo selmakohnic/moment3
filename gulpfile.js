@@ -4,11 +4,13 @@ const browserSync = require("browser-sync").create()
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const uglifyCss = require("gulp-clean-css");
+const sass = require("gulp-sass");
+sass.compiler = require("node-sass");
 
 //Sökvägar
 const files = {
     htmlPath: "src/**/*.html",
-    cssPath: "src/**/*.css",
+    sassPath: "src/**/*.scss",
     jsPath: "src/**/*.js",
     imgPath: "src/images/**"
 }
@@ -20,12 +22,13 @@ function copyHtml() {
         .pipe(browserSync.stream())
 }
 
-//Task sammanslå, minifiera och kopiera CSS-filer
-function cssTask() {
-    return src(files.cssPath)
+//Task konverterar från SCSS till CSS, sammanslår, minifierar och kopierar CSS-filer 
+function sassTask() {
+    return src(files.sassPath)
+        .pipe(sass().on("error", sass.logError))
         .pipe(concat("style.css"))
         .pipe(uglifyCss())
-        .pipe(dest("pub/css"))
+        .pipe(dest("pub/scss"))
         .pipe(browserSync.stream())
 }
 
@@ -52,13 +55,13 @@ function watchTask() {
             baseDir: 'pub/'
         }
     });
-    watch([files.htmlPath, files.cssPath, files.jsPath, files.imgPath],
-        parallel(copyHtml, cssTask, jsTask, copyImg)
+    watch([files.htmlPath, files.sassPath, files.jsPath, files.imgPath],
+        parallel(copyHtml, sassTask, jsTask, copyImg)
     ).on('change', browserSync.reload);
 }
 
 //Gör funktionerna publika
 exports.default = series(
-    parallel(copyHtml, cssTask, jsTask, copyImg),
+    parallel(copyHtml, sassTask, jsTask, copyImg),
     watchTask
 );

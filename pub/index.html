@@ -1,17 +1,90 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Moment 2</title>
+    <title>Moment 3</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
+
 <body>
-    <h1>Moment 2</h1>
-    <p>Lite text och så lite till. Skriver lite till!</p>
-    <img src="images/galaxy-elephant.png" alt="Elefant" title="Elefant">
+    <div id="wrapper">
+        <!-- Logotyp och global navigering -->
+        <header>
+            <img src="images/selmasdesign-logotyp.png" alt="Selma's design logotyp" title="Selma's design logotyp"
+                id="headerLogo">
+
+            <div class="hamburgerMenu" onclick="toggleMenu()"></div>
+
+            <nav id="globalNav">
+                <ul>
+                    <li><a href="#" title="Hem">Hem</a></li>
+                    <li><a href="#" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#" title="Uppdrag">Uppdrag</a></li>
+                    <li><a href="#" title="Om oss">Om oss</a></li>
+                    <li><a href="#" title="Kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="leftText">
+            <h3>Levande portfolio</h3>
+            <p>På denna webbplats uppdaterar jag med mina senaste digitala illustrationer. Jag föredrar att skapa
+                minimalistiska
+                illustrationer och då gärna med hjälp av former som grunder. Just nu har jag ett galaxytema med färgerna
+                lila, ljusblå och gul.</p>
+        </section>
+
+        <section id="rightText">
+            <h3>Illustrationer</h3>
+            <p>"En illustration är en visualisering i form av en ritning, skiss, målning, fotografi eller annat verk som
+                belyser eller dikterar information med hjälp av en grafisk representation." <br>- Wikipedia</p>
+        </section>
+
+        <!-- Illustrationer -->
+        <section>
+            <div id="illustrations">
+                <figure>
+                    <img src="images/purple-alien-space-ship.png" alt="Illustration av ett rymdskepp"
+                        title="Illustration av ett rymdskepp">
+                </figure>
+
+                <figure>
+                    <img src="images/purple-half-moon.png" alt="Illustration av en sovande måne"
+                        title="Illustration av en sovande måne">
+                </figure>
+
+                <figure>
+                    <img src="images/purple-lightbulb.png" alt="Illustration av en glödlampa"
+                        title="Illustration av en glödlampa">
+                </figure>
+
+                <figure>
+                    <img src="images/purple-galaxy-planet.png" alt="Illustration av en planet"
+                        title="Illustration av en planet">
+                </figure>
+
+                <figure>
+                    <img src="images/purple-star.png" alt="Illustration av en stjärna"
+                        title="Illustration av en stjärna">
+                </figure>
+
+                <figure>
+                    <img src="images/purple-drink.png" alt="Illustration av en drink" title="Illustration av en drink">
+                </figure>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p id="bigLetters">Webbutveckling III | DT173G</p>
+    </footer>
     <script src="js/main.js"></script>
 </body>
+
 </html>
