@@ -1,1 +1,1 @@
-"use strict";function toggleMenu(){$("#globalNav").toggle(),$(".hamburgerMenu").toggleClass("hMenuClose")}console.log("Detta är första filen."),console.log("Detta är andra filen.");
+"use strict";function toggleMenu(){$("#globalNav").toggle(),$(".hamburgerMenu").toggleClass("hMenuClose")}console.log("Detta är första filen.");var doubled=function(e){return 2*e};console.log(doubled(6)),console.log("Detta är andra filen.");

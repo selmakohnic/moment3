@@ -1,11 +1,12 @@
 //Paket som används
-const {src, dest, watch, series, parallel} = require("gulp")
+const { src, dest, watch, series, parallel } = require("gulp")
 const browserSync = require("browser-sync").create()
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const uglifyCss = require("gulp-clean-css");
 const sass = require("gulp-sass");
 sass.compiler = require("node-sass");
+const babel = require("gulp-babel");
 
 //Sökvägar
 const files = {
@@ -35,6 +36,9 @@ function sassTask() {
 //Task sammanslå, minifiera och kopiera JS-filer
 function jsTask() {
     return src(files.jsPath)
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(concat("main.js"))
         .pipe(uglify())
         .pipe(dest("pub/js"))
@@ -44,8 +48,8 @@ function jsTask() {
 //Kopiera alla bilder
 function copyImg() {
     return src(files.imgPath)
-    .pipe(dest("pub/images/"))
-    .pipe(browserSync.stream())
+        .pipe(dest("pub/images/"))
+        .pipe(browserSync.stream())
 }
 
 //Task watcher
